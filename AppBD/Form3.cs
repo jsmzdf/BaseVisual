@@ -55,10 +55,11 @@ namespace AppBD
             label15.Text = contratista.nombre;
             label16.Text = contratista.id;
             /*
-            contratista.TABLA = new DataSet();
-            contratista.ORDEN.Fill(contratista.TABLA, "CONTRATiSTA");
-            dataGridView3.DataSource = contratista.TABLA;
-            dataGridView3.DataMember = "CONTRATISTA";*/
+                    contratista.TABLA = new DataSet();
+                    contratista.ORDEN.Fill(contratista.TABLA, "CONTRATiSTA");
+                    dataGridView3.DataSource = contratista.TABLA;
+                    dataGridView3.DataMember = "CONTRATISTA"; */
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -83,55 +84,105 @@ namespace AppBD
 
         private void button4_Click(object sender, EventArgs e)
         {
-            contratista.con.ruta = this.ruta;
-            contrato.con.ruta = this.ruta;
-            contratista.consutaexistencia(textBox12.Text);
-            contrato.consultarC(textBox2.Text);
-            string cc = contratista.id;
-            ArrayList nombres = contratista.nombres;
+            try {
 
-            if (contrato.cod==textBox2.Text)
-            {
-                MessageBox.Show("El número de contrato ya exixte");
-            }
-            else
-            {
-                if (cc == textBox12.Text)
+                bool exixtencia = true;
+                contratista.con.ruta = this.ruta;
+                contrato.con.ruta = this.ruta;
+                contratista.consutaexistencia(textBox12.Text);
+                contrato.consultarC(textBox2.Text);
+                string cc = contratista.id;
+                ArrayList nombres = contratista.nombres;
+
+                if (contrato.cod == textBox2.Text)
                 {
-                    for (int i = 0; i < nombres.Count; i++)
+                    MessageBox.Show("El número de contrato ya exixte");
+                }
+                else
+                {
+                    if (cc == textBox12.Text)
                     {
-                        if (nombres[i].ToString() == textBox13.Text)
+                        for (int i = 0; i < nombres.Count; i++)
                         {
-                            Console.WriteLine("ya existe el cotratista");
-                            contratista.consultarID(textBox13.Text,Double.Parse( textBox12.Text));
-
-                            MessageBoxButtons sino = MessageBoxButtons.YesNo;
-                            DialogResult accion = MessageBox.Show("¿Quiere realizar acción?", "", sino, MessageBoxIcon.Question);
-                            if (accion == DialogResult.Yes)
+                            if (nombres[i].ToString() == textBox13.Text)
                             {
-                                contrato.addC(textBox2.Text, textBox3.Text, int.Parse(textBox5.Text), textBox4.Text,
-                                textBox7.Text, textBox6.Text, textBox9.Text, int.Parse(textBox8.Text),
-                                Double.Parse(textBox11.Text), textBox10.Text);
-                                contricon.con.ruta = this.ruta;
-                                contricon.addConContri(double.Parse(contrato.cod), textBox2.Text);
-                                MessageBox.Show("Se Agregó un nuevo contrato");
+
+                                contratista.consultarID(textBox13.Text, Double.Parse(textBox12.Text));
+
+                                MessageBoxButtons sino = MessageBoxButtons.YesNo;
+                                DialogResult accion = MessageBox.Show("¿Quiere realizar acción?", "", sino, MessageBoxIcon.Question);
+                                if (accion == DialogResult.Yes)
+                                {
+                                    try
+                                    {
+                                        contrato.addC(textBox2.Text, textBox3.Text, int.Parse(textBox5.Text), textBox4.Text,
+                                             textBox7.Text, textBox6.Text, textBox9.Text, int.Parse(textBox8.Text),
+                                             Double.Parse(textBox11.Text), textBox10.Text);
+                                        contricon.con.ruta = this.ruta;
+                                        contricon.addConContri(double.Parse(contratista.cod), textBox2.Text);
+                                        MessageBox.Show("Se Agregó un nuevo contrato");
+                                        break;
+                                    }
+                                    catch (Exception)
+                                    {
+                                        MessageBox.Show("Ingrese valoes correctos", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+
+                                }
+                                else { break; }
+
+
 
                             }
-                           
-                                                     
+                            else { exixtencia = false; }
                         }
                     }
+                    else { exixtencia = false; }
+                    if (textBox12.Text != "" && textBox13.Text != "" || exixtencia == false)
+                    {
+
+                        MessageBoxButtons sino = MessageBoxButtons.YesNo;
+                        DialogResult accion = MessageBox.Show("¿Quiere realizar acción?", "", sino, MessageBoxIcon.Question);
+                        if (accion == DialogResult.Yes)
+                        {
+                            try
+                            {
+
+                                contrato.addC(textBox2.Text, textBox3.Text, int.Parse(textBox5.Text), textBox4.Text,
+                                            textBox7.Text, textBox6.Text, textBox9.Text, int.Parse(textBox8.Text),
+                                            Double.Parse(textBox11.Text), textBox10.Text);
+                                contratista.ultimoID();
+                                contratista.agregarContratista(double.Parse(textBox12.Text), textBox13.Text);
+
+                                contricon.con.ruta = this.ruta;
+                                contricon.addConContri(double.Parse(contratista.cod), textBox2.Text);
+                                MessageBox.Show("Se Agregó un nuevo contrato");
+
+
+                            }
+                            catch (Exception)
+                            {
+                                MessageBox.Show("Ingrese valoes correctos", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+                        else
+                        {
+
+                        }
+
+
+
+
+                    }
                 }
-                else if(textBox12.Text!=""&& textBox13.Text != "")
-                {
-
-                    Console.WriteLine("no existe el cotratista");
 
 
-                }
             }
-
-       
+            catch (Exception) {
+                MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
+            }
+            
         }
 
         private void label17_Click(object sender, EventArgs e)

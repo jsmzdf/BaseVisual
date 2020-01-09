@@ -32,17 +32,24 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -62,17 +69,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,6 +125,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(360, 214);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(23, 16);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "---";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(360, 185);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 16);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "---";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(28, 214);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(309, 25);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Identificación del contratista";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -155,14 +183,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "CONTRATO";
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(355, -15);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(729, 66);
-            this.dataGridView3.TabIndex = 2;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
@@ -183,9 +203,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(785, 67);
             this.dataGridView1.TabIndex = 0;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(258, 144);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(729, 66);
+            this.dataGridView3.TabIndex = 2;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox2.Controls.Add(this.dataGridView3);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.textBox13);
             this.groupBox2.Controls.Add(this.textBox10);
@@ -212,9 +241,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(223, 87);
+            this.groupBox2.Location = new System.Drawing.Point(131, 86);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(264, 484);
+            this.groupBox2.Size = new System.Drawing.Size(449, 484);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar Contrato";
@@ -230,6 +259,13 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(152, 415);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 22);
+            this.textBox13.TabIndex = 19;
+            // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(152, 336);
@@ -237,12 +273,29 @@
             this.textBox10.Size = new System.Drawing.Size(100, 22);
             this.textBox10.TabIndex = 19;
             // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(152, 379);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 22);
+            this.textBox12.TabIndex = 18;
+            // 
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(152, 303);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 22);
             this.textBox11.TabIndex = 18;
+            this.textBox11.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(16, 405);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 32);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "Nombre \r\ndel cotratista";
             // 
             // label12
             // 
@@ -252,6 +305,16 @@
             this.label12.Size = new System.Drawing.Size(81, 16);
             this.label12.TabIndex = 17;
             this.label12.Text = "Interventor";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(13, 369);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(102, 32);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Identificación\r\n del cotratista";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label13
             // 
@@ -268,12 +331,13 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 22);
             this.textBox8.TabIndex = 15;
+            this.textBox8.Text = "0";
             // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(152, 242);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
+            this.textBox9.Size = new System.Drawing.Size(263, 22);
             this.textBox9.TabIndex = 14;
             // 
             // label10
@@ -339,6 +403,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 6;
+            this.textBox5.Text = "0";
             // 
             // label6
             // 
@@ -409,67 +474,6 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 6;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(28, 214);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(309, 25);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Identificación del contratista";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(360, 185);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 16);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "---";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(360, 214);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(23, 16);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "---";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(13, 369);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(102, 32);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "Identificación\r\n del cotratista";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(16, 405);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 32);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "Nombre \r\ndel cotratista";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(152, 379);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 18;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(152, 415);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 19;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,7 +483,6 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
@@ -489,9 +492,9 @@
             this.Text = "Contrato";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);

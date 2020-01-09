@@ -20,10 +20,11 @@ namespace AppBD.Clases
             string q = "INSERT INTO [CONTRATISTA_CONTRATO](ID_CONTRATISTA,CONTRATO_NO) " +
                "values(@ID_CONTRATISTA,@CONTRATO_NO)";
             ORDENU = new OleDbCommand(q, con.CANAL);
-            ORDENU.Parameters.Add(new OleDbParameter("@CONTRATO_NO", OleDbType.VarChar));
-            ORDENU.Parameters["@CONTRATO_NO"].Value = con_no;
             ORDENU.Parameters.Add(new OleDbParameter("@ID_CONTRATISTA", OleDbType.Double));
             ORDENU.Parameters["@ID_CONTRATISTA"].Value = idCotratista;
+            ORDENU.Parameters.Add(new OleDbParameter("@CONTRATO_NO", OleDbType.VarChar));
+            ORDENU.Parameters["@CONTRATO_NO"].Value = con_no;
+            
             ORDENU.Connection.Open();
             ORDENU.ExecuteNonQuery();
             ORDENU.Connection.Close();

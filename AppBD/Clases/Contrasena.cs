@@ -30,6 +30,7 @@ namespace AppBD.Clases
             "WHERE CEDULA =@CLABUSCAR", con.CANAL);
                 ORDEN.SelectCommand.Parameters.Add(new OleDbParameter("@CLABUSCAR", OleDbType.VarChar));
                 ORDEN.SelectCommand.Parameters["@CLABUSCAR"].Value = consulta;
+                dt = new DataTable();
                 TABLA = new DataSet();
                 ORDEN.Fill(TABLA);
                 dt = TABLA.Tables[0];
