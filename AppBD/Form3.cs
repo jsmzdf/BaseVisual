@@ -30,40 +30,42 @@ namespace AppBD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = true;
-            groupBox2.Visible = false;
-            groupBox3.Visible = false;
+            try {
+                button5.Enabled = false;
+                groupBox1.Visible = true;
+                groupBox2.Visible = false;
+                groupBox3.Visible = false;
 
 
 
-            contrato.con.ruta = ruta;
-            contrato.consultarC(textBox1.Text);
-            contrato.TABLA = new DataSet();
-            contrato.ORDEN.Fill(contrato.TABLA, "CONTRATO");
-            dataGridView1.DataSource = contrato.TABLA;
-            dataGridView1.DataMember = "CONTRATO";
+                contrato.con.ruta = ruta;
+                contrato.consultarC(textBox1.Text);
+                textBox17.Text = contrato.objeto;
+                contrato.TABLA = new DataSet();
+                contrato.ORDEN.Fill(contrato.TABLA, "CONTRATO");
+                dataGridView1.DataSource = contrato.TABLA;
+                dataGridView1.DataMember = "CONTRATO";
 
-            prestamo.con.ruta = ruta;
-            prestamo.consultarP(textBox1.Text);
-            prestamo.TABLA = new DataSet();
-            prestamo.ORDEN.Fill(prestamo.TABLA, "Prestamo");
-            dataGridView2.DataSource = prestamo.TABLA;
-            dataGridView2.DataMember = "Prestamo";
+                prestamo.con.ruta = ruta;
+                prestamo.consultarP(textBox1.Text);
+                prestamo.TABLA = new DataSet();
+                prestamo.ORDEN.Fill(prestamo.TABLA, "Prestamo");
+                dataGridView2.DataSource = prestamo.TABLA;
+                dataGridView2.DataMember = "Prestamo";
+
+                contratista.con.ruta = ruta;
+                contratista.consultarContratisa(textBox1.Text);
+                label15.Text = contratista.nombre;
+                label16.Text = contratista.id;
+            } catch (Exception) { MessageBox.Show("Ingrese valoes correctos", "error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             
-            contratista.con.ruta = ruta;
-            contratista.consultarContratisa(textBox1.Text);
-            label15.Text = contratista.nombre;
-            label16.Text = contratista.id;
-            /*
-                    contratista.TABLA = new DataSet();
-                    contratista.ORDEN.Fill(contratista.TABLA, "CONTRATiSTA");
-                    dataGridView3.DataSource = contratista.TABLA;
-                    dataGridView3.DataMember = "CONTRATISTA"; */
+          
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button5.Enabled = false;
             groupBox1.Visible = false;
             groupBox2.Visible = true;
             groupBox3.Visible = false;
@@ -74,6 +76,8 @@ namespace AppBD
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+            button5.Enabled = false;
             groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = true;
@@ -188,6 +192,52 @@ namespace AppBD
         private void label17_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+          
+                button5.Enabled = false;
+                contrato.con.ruta = this.ruta;
+                MessageBoxButtons sino = MessageBoxButtons.YesNo;
+                DialogResult accion = MessageBox.Show("¿Quiere realizar acción?", "", sino, MessageBoxIcon.Question);
+                if (accion == DialogResult.Yes)
+                {
+                    contrato.updateC(textBox16.Text, textBox15.Text, textBox14.Text);
+                    textBox14.Enabled = true;
+                }
+                else
+                {
+                }
+            try
+            {
+            } catch (Exception)
+            {
+                MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        { 
+            try
+            {
+                contrato.con.ruta = ruta;
+                contrato.consultarC(textBox14.Text);
+                
+                contrato.TABLA = new DataSet();
+                contrato.ORDEN.Fill(contrato.TABLA, "CONTRATO");
+                dataGridView3.DataSource = contrato.TABLA;
+                dataGridView3.DataMember = "CONTRATO";
+                if (contrato.cod == textBox14.Text) {
+                    textBox14.Enabled = false;
+                        button5.Enabled = true; }
+                
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
+            }
         }
     }
 }

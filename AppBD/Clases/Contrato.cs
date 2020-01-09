@@ -14,6 +14,7 @@ namespace AppBD.Clases
         public OleDbDataAdapter ORDEN;
         DataTable dt = new DataTable();
         public string cod = "";
+        public string objeto = "";
         OleDbCommand ORDENU;
         public void consultarC(string consulta)
         {
@@ -33,24 +34,24 @@ namespace AppBD.Clases
                 cod = Convert.ToString(row["CONTRATO_NO"]);
 
             }
+            foreach (DataRow row in dt.Rows)
+            {
+                objeto = Convert.ToString(row["OBJETO"]);
+
+            }
 
         }
-        public void updateC()
+        public void updateC(string ubicacion,string numerocCarpetas,string numeroContrato)
         {
-
-
-
-            /*con.conectar();
-            string q = "update  [CONTRATO] set Placa = @PLACA,CapacidadPuestos=@CAPACIDADPUESTOS,Vacantes=@VACANTES where NumeroBus=" + textBox1.Text;
+            con.conectar();
+            string q = "update  [CONTRATO] set [UBICACIÓN] = @UBI, CARPETAS_NO = @CNO where CONTRATO_NO= @contratono" ;
             ORDENU = new OleDbCommand(q, con.CANAL);
-            
-            ORDENU.Parameters.Add(new OleDbParameter("@PLACA", OleDbType.VarWChar, 6));
-            ORDENU.Parameters["@PLACA"].Value = textBox2.Text;
-            ORDENU.Parameters.Add(new OleDbParameter("@CAPACIDADPUESTOS", OleDbType.Integer));
-            ORDENU.Parameters["@CAPACIDADPUESTOS"].Value = int.Parse(textBox3.Text);
-            ORDENU.Parameters.Add(new OleDbParameter("@VACANTES", OleDbType.Integer));
-            ORDENU.Parameters["@VACANTES"].Value = int.Parse(textBox3.Text);
-            */
+            ORDENU.Parameters.Add(new OleDbParameter("@UBI", OleDbType.VarWChar));
+            ORDENU.Parameters["@UBI"].Value = ubicacion;
+            ORDENU.Parameters.Add(new OleDbParameter("@CNO", OleDbType.VarChar));
+            ORDENU.Parameters["@CNO"].Value =numerocCarpetas ;
+            ORDENU.Parameters.Add(new OleDbParameter("@contratono", OleDbType.VarChar));
+            ORDENU.Parameters["@contratono"].Value = numeroContrato;
 
             ORDENU.Connection.Open();
             ORDENU.ExecuteNonQuery();
