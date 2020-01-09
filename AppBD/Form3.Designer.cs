@@ -32,6 +32,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -68,17 +70,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -137,6 +139,22 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(30, 150);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(761, 22);
+            this.textBox17.TabIndex = 10;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(27, 134);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(54, 16);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Objeto";
             // 
             // label16
             // 
@@ -201,6 +219,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridView2.Enabled = false;
             this.dataGridView2.Location = new System.Drawing.Point(6, 335);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(945, 190);
@@ -211,6 +230,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(6, 49);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(945, 67);
@@ -220,6 +240,7 @@
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Enabled = false;
             this.dataGridView3.Location = new System.Drawing.Point(20, 111);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(729, 66);
@@ -489,60 +510,15 @@
             this.groupBox3.Text = "Editar";
             this.groupBox3.Visible = false;
             // 
-            // textBox1
+            // button6
             // 
-            this.textBox1.Location = new System.Drawing.Point(1, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(17, 26);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(144, 16);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Número de contrato";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(24, 53);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 22);
-            this.textBox14.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(17, 185);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(149, 16);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Número de carpetas";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(17, 228);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 16);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Ubicación";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(20, 204);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 22);
-            this.textBox15.TabIndex = 1;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(20, 247);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 22);
-            this.textBox16.TabIndex = 1;
+            this.button6.Location = new System.Drawing.Point(152, 53);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(111, 23);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Consulta";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -555,47 +531,99 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // textBox16
             // 
-            this.button6.Location = new System.Drawing.Point(152, 53);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(111, 23);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Consulta";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.textBox16.Location = new System.Drawing.Point(20, 247);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(100, 22);
+            this.textBox16.TabIndex = 1;
             // 
-            // label22
+            // textBox15
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(27, 134);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(54, 16);
-            this.label22.TabIndex = 8;
-            this.label22.Text = "Objeto";
+            this.textBox15.Location = new System.Drawing.Point(20, 204);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 22);
+            this.textBox15.TabIndex = 1;
             // 
-            // textBox17
+            // textBox14
             // 
-            this.textBox17.Location = new System.Drawing.Point(30, 150);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(761, 22);
-            this.textBox17.TabIndex = 10;
+            this.textBox14.Location = new System.Drawing.Point(24, 53);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 22);
+            this.textBox14.TabIndex = 1;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(17, 228);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(78, 16);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Ubicación";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(17, 185);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(149, 16);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Número de carpetas";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(17, 26);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(144, 16);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Número de contrato";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1, 41);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(880, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(132, 23);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Salir";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(724, 12);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(132, 23);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Atras";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(981, 674);
+            this.ClientSize = new System.Drawing.Size(1053, 674);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contrato";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -664,5 +692,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

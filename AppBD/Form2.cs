@@ -16,5 +16,15 @@ namespace AppBD
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose(true);
+        }
     }
 }

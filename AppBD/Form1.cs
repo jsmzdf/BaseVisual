@@ -44,7 +44,14 @@ namespace AppBD
             Form contrato = new Form3(ruta);
             contrato.ShowDialog();
         }
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose(true);
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -53,6 +60,16 @@ namespace AppBD
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose(true);
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

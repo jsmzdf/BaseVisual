@@ -239,5 +239,15 @@ namespace AppBD
                 MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Dispose(true);
+        }
     }
 }
