@@ -1,0 +1,14 @@
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\bin\Debug\AppBD.exe.config
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\bin\Debug\AppBD.exe
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\bin\Debug\AppBD.pdb
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.csprojAssemblyReference.cache
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Form1.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Properties.Resources.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.csproj.GenerateResource.cache
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.csproj.CoreCompileInputs.cache
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.exe
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.pdb
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Form3.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Form4.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Form2.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Form5.resources
