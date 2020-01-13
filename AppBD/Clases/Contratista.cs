@@ -97,7 +97,7 @@ namespace AppBD.Clases
         }
 
 
-        public void ultimoID() {
+        public void obetenerUltimoID() {
 
             con.conectar();
             string q0 = "SELECT ID_CONTRATISTA, NOMBRE_CONTRATISTA1, IDENTIFICACION FROM CONTRATISTA";
@@ -116,7 +116,7 @@ namespace AppBD.Clases
 
             }
             cod = (aux + 1).ToString();
-            Console.WriteLine(cod);
+            
         }
         public void agregarContratista(double cedula,string nombre)
         {

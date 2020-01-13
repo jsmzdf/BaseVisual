@@ -22,6 +22,9 @@ namespace AppBD
         public Form2(string ruta)
         {
             this.ruta = ruta;
+            contrato.con.ruta = this.ruta;
+            prestamo.con.ruta = this.ruta;
+            presCon.con.ruta = this.ruta;
             InitializeComponent();
         }
 
@@ -37,23 +40,62 @@ namespace AppBD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
+            button8.Enabled = false;
+            textBox1.Enabled = false;
             groupBox2.Visible = false;
             groupBox1.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-            
+            textBox1.Enabled = false;
+            button8.Enabled = false;
             groupBox1.Visible = false;
             groupBox2.Visible = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-           
+            
+            try
+            {
+                MessageBoxButtons sino = MessageBoxButtons.YesNo;
+                DialogResult accion = MessageBox.Show("¿Quiere realizar acción?", "", sino, MessageBoxIcon.Question);
+                if (accion == DialogResult.Yes)
+                {
+                    prestamo.obetenerUltimoID();
+                    prestamo.generarPR(double.Parse(prestamo.id), textBox2.Text, textBox3.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text);
+                    presCon.addConPRes(double.Parse(prestamo.id), textBox1.Text);
+                }
+                else
+                {
+                    textBox1.Text = "";
+                    button8.Enabled = true;
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox5.Text = "";
+                    textBox6.Text = "";
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                    textBox10.Text = "";
+                  
+
+
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            textBox1.Text = "";
+            button8.Enabled = true;
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox10.Text = "";
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -62,9 +104,9 @@ namespace AppBD
             {
                 //bool exixtencia = true;
 
-                contrato.con.ruta = this.ruta;
+                
                 contrato.consultarC(textBox1.Text);
-                prestamo.con.ruta = this.ruta;
+                
                 prestamo.consultarP(textBox1.Text);
                 if (contrato.cod == textBox1.Text)
                 {
@@ -99,38 +141,50 @@ namespace AppBD
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+       
+
+        private void button3_Click(object sender, EventArgs e)
         {
             try
             {
-                //bool exixtencia = true;
+                
+                    MessageBoxButtons sino = MessageBoxButtons.YesNo;
+                    DialogResult accion = MessageBox.Show("¿Quiere realizar acción?", "", sino, MessageBoxIcon.Question);
+                    if (accion == DialogResult.Yes)
+                    {
+                       
+                    }
+                    else
+                    {
+                        textBox1.Text = "";
+                        button8.Enabled = true;
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox5.Text = "";
+                        textBox6.Text = "";
+                        textBox7.Text = "";
+                        textBox8.Text = "";
+                        textBox10.Text = "";
 
-                contrato.con.ruta = this.ruta;
-                contrato.consultarC(textBox1.Text);
-               
-                if (contrato.cod == textBox1.Text)
+
+
+                    }
+                }
+                catch (Exception)
                 {
 
-                    Console.WriteLine("existe");
-                    button3.Enabled = true;
-                    prestamo.con.ruta = ruta;
-                    prestamo.consultarP(textBox1.Text);
-                    prestamo.TABLA = new DataSet();
-                    prestamo.ORDEN.Fill(prestamo.TABLA, "Prestamo");
-                    dataGridView2.DataSource = prestamo.TABLA;
-                    dataGridView2.DataMember = "Prestamo";
                 }
-                else
-                {
-
-                    MessageBox.Show("El Contrato no existe");
-                }
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
-            }
+            textBox1.Text = "";
+            button8.Enabled = true;
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox10.Text = "";
+        }
+            
         }
     }
 }

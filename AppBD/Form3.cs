@@ -25,6 +25,9 @@ namespace AppBD
         public Form3(string ruta)
         {
             this.ruta = ruta;
+            contratista.con.ruta = this.ruta;
+            contrato.con.ruta = this.ruta;
+            prestamo.con.ruta = this.ruta;
             InitializeComponent();
         }
 
@@ -36,9 +39,6 @@ namespace AppBD
                 groupBox2.Visible = false;
                 groupBox3.Visible = false;
 
-
-
-                contrato.con.ruta = ruta;
                 contrato.consultarC(textBox1.Text);
                 textBox17.Text = contrato.objeto;
                 contrato.TABLA = new DataSet();
@@ -46,14 +46,14 @@ namespace AppBD
                 dataGridView1.DataSource = contrato.TABLA;
                 dataGridView1.DataMember = "CONTRATO";
 
-                prestamo.con.ruta = ruta;
+                
                 prestamo.consultarP(textBox1.Text);
                 prestamo.TABLA = new DataSet();
                 prestamo.ORDEN.Fill(prestamo.TABLA, "Prestamo");
                 dataGridView2.DataSource = prestamo.TABLA;
                 dataGridView2.DataMember = "Prestamo";
 
-                contratista.con.ruta = ruta;
+                
                 contratista.consultarContratisa(textBox1.Text);
                 label15.Text = contratista.nombre;
                 label16.Text = contratista.id;
@@ -91,8 +91,7 @@ namespace AppBD
             try {
 
                 bool exixtencia = true;
-                contratista.con.ruta = this.ruta;
-                contrato.con.ruta = this.ruta;
+                
                 contratista.consutaexistencia(textBox12.Text);
                 contrato.consultarC(textBox2.Text);
                 string cc = contratista.id;
@@ -155,7 +154,7 @@ namespace AppBD
                                 contrato.addC(textBox2.Text, textBox3.Text, int.Parse(textBox5.Text), textBox4.Text,
                                             textBox7.Text, textBox6.Text, textBox9.Text, int.Parse(textBox8.Text),
                                             Double.Parse(textBox11.Text), textBox10.Text);
-                                contratista.ultimoID();
+                                contratista.obetenerUltimoID();
                                 contratista.agregarContratista(double.Parse(textBox12.Text), textBox13.Text);
 
                                 contricon.con.ruta = this.ruta;
@@ -172,7 +171,7 @@ namespace AppBD
                         }
                         else
                         {
-
+    
                         }
 
 
@@ -186,7 +185,27 @@ namespace AppBD
             catch (Exception) {
                 MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
             }
+            textBox1.Text = "";
+            textBox5.Text = "";
+            textBox15.Text = "";
+            textBox8.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            textBox13.Text = "";
+            textBox14.Text = "";
+            textBox15.Text = "";
+            textBox16.Text = "";
             
+
         }
 
         private void label17_Click(object sender, EventArgs e)
@@ -198,7 +217,7 @@ namespace AppBD
         {
           
                 button5.Enabled = false;
-                contrato.con.ruta = this.ruta;
+                
                 MessageBoxButtons sino = MessageBoxButtons.YesNo;
                 DialogResult accion = MessageBox.Show("¿Quiere realizar acción?", "", sino, MessageBoxIcon.Question);
                 if (accion == DialogResult.Yes)
@@ -215,13 +234,32 @@ namespace AppBD
             {
                 MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
             }
+            textBox1.Text = "";
+            textBox5.Text = "";
+            textBox15.Text = "";
+            textBox8.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            textBox13.Text = "";
+            textBox14.Text = "";
+            textBox15.Text = "";
+            textBox16.Text = "";
         }
 
         private void button6_Click(object sender, EventArgs e)
         { 
             try
             {
-                contrato.con.ruta = ruta;
+                
                 contrato.consultarC(textBox14.Text);
                 
                 contrato.TABLA = new DataSet();

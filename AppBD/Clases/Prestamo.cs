@@ -18,6 +18,7 @@ namespace AppBD.Clases
         OleDbCommand ORDENU;
         DataTable dt = new DataTable();
         public string estado;
+        public string id;
         public void consultarP(string consulta)
         {
             
@@ -62,6 +63,83 @@ namespace AppBD.Clases
             ORDENU.Connection.Open();
             ORDENU.ExecuteNonQuery();
             ORDENU.Connection.Close();
+        }
+
+        public void updateC(string ubicacion, string numerocCarpetas, string numeroContrato)
+        {
+           /* con.conectar();
+            string q = "update  [CONTRATO] set [UBICACIÓN] = @UBI, CARPETAS_NO = @CNO where CONTRATO_NO= @contratono";
+            ORDENU = new OleDbCommand(q, con.CANAL);
+            ORDENU.Parameters.Add(new OleDbParameter("@UBI", OleDbType.VarWChar));
+            ORDENU.Parameters["@UBI"].Value = ubicacion;
+            ORDENU.Parameters.Add(new OleDbParameter("@CNO", OleDbType.VarChar));
+            ORDENU.Parameters["@CNO"].Value = numerocCarpetas;
+            ORDENU.Parameters.Add(new OleDbParameter("@contratono", OleDbType.VarChar));
+            ORDENU.Parameters["@contratono"].Value = numeroContrato;
+
+            ORDENU.Connection.Open();
+            ORDENU.ExecuteNonQuery();
+            ORDENU.Connection.Close();*/
+        }
+        public void generarPR(double idPrestamo,string funcionarioContratista, string dependencia, string quienPresta,
+            string motivoPrestamo,string numeroCarpetas,string observaciones)
+        {
+            
+            string q = "INSERT INTO [PRESTAMOS_DEVOLUCIONES](ID_PRESTAMO,FECHA_PRESTAMO," +
+                "FUNCIONARIO_CONTRATISTA,DEPENDENCIA,ESTADO,QUIEN_PRESTA,MOTIVO_PRESTAMO," +
+                "NO_CARPETAS,OBSERVACIONES,FECHA_ACTUAL) " +
+                "values(@IDPRES,@FEHCAPRES,@FUNCONTRA," +
+                "@DEPENDEN,@ESTADO,@QUIENPRES," +
+                "@MOTIVOPRES,@NOCARPE,@BOSER,@FECHAACT)";
+
+            ORDENU = new OleDbCommand(q, con.CANAL);
+            ORDENU.Parameters.Add(new OleDbParameter("@IDPRES", OleDbType.Double));
+            ORDENU.Parameters["@IDPRES"].Value = idPrestamo;
+            ORDENU.Parameters.Add(new OleDbParameter("@FEHCAPRES", OleDbType.Date));
+            ORDENU.Parameters["@FEHCAPRES"].Value = DateTime.Now;
+            ORDENU.Parameters.Add(new OleDbParameter("@FUNCONTRA", OleDbType.VarChar));
+            ORDENU.Parameters["@FUNCONTRA"].Value = funcionarioContratista;
+            ORDENU.Parameters.Add(new OleDbParameter("@DEPENDENCIA", OleDbType.VarChar));
+            ORDENU.Parameters["@DEPENDENCIA"].Value = dependencia;
+            ORDENU.Parameters.Add(new OleDbParameter("@ESTADO", OleDbType.VarChar));
+            ORDENU.Parameters["@ESTADO"].Value = "PRESTADO";
+            ORDENU.Parameters.Add(new OleDbParameter("@QUIENPRES", OleDbType.VarChar));
+            ORDENU.Parameters["@QUIENPRES"].Value = quienPresta;
+            ORDENU.Parameters.Add(new OleDbParameter("@MOTIVOPRES", OleDbType.VarChar));
+            ORDENU.Parameters["@MOTIVOPRES"].Value = motivoPrestamo;
+            ORDENU.Parameters.Add(new OleDbParameter("@NOCARPE", OleDbType.VarChar));
+            ORDENU.Parameters["@NOCARPE"].Value = numeroCarpetas;
+            ORDENU.Parameters.Add(new OleDbParameter("@BOSER", OleDbType.VarChar));
+            ORDENU.Parameters["@BOSER"].Value = observaciones;
+            ORDENU.Parameters.Add(new OleDbParameter("@FECHAACT", OleDbType.Date));
+            ORDENU.Parameters["@FECHAACT"].Value = DateTime.Now;
+            ORDENU.Connection.Open();
+            ORDENU.ExecuteNonQuery();
+            ORDENU.Connection.Close();
+            
+
+        }
+        public void obetenerUltimoID()
+        {
+
+            con.conectar();
+            string q0 = "SELECT ID_PRESTAMO FROM [PRESTAMOS_DEVOLUCIONES]";
+            ORDEN = new OleDbDataAdapter(q0, con.CANAL);
+            dt = new DataTable();
+            TABLA = new DataSet();
+            ORDEN.Fill(TABLA);
+            dt = TABLA.Tables[0];
+            double codenumero = 0;
+            double aux = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                id = Convert.ToString(row["ID_PRESTAMO"]);
+                codenumero = double.Parse(id);
+                if (aux < codenumero) { aux = codenumero; }
+
+            }
+            id = (aux + 1).ToString();
+            
         }
     }
 }
