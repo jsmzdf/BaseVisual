@@ -109,7 +109,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(417, 20);
             this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "C:\\Users\\sebas\\udistri\\trabajo hermana\\database1.0vacia.mdb";
+            this.textBox3.Text = "C:\\Users\\sebas\\udistri\\trabajo hermana\\SATABASEPRUEBA.accdb";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button5

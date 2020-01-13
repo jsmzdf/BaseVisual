@@ -249,5 +249,10 @@ namespace AppBD
         {
             this.Dispose(true);
         }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

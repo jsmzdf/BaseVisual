@@ -19,9 +19,10 @@ namespace AppBD.Clases
             string curFile = @""+ruta;
              result=File.Exists(curFile) ? "ok" : "fail";
 
-            if (result.Equals("ok")) { 
-
-             CANAL = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source="+ruta);
+            if (result.Equals("ok")) {
+                //Microsoft.ACE.OLEDB.12.0
+                //Microsoft.Jet.OLEDB.4.0
+                CANAL = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + ruta);
             }
            
            

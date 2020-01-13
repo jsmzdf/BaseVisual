@@ -34,7 +34,7 @@ namespace AppBD
            // Application.EnableVisualStyles();
            
             
-            Form prestamos= new Form2();
+            Form prestamos= new Form2(ruta);
             prestamos.ShowDialog();
            
         }

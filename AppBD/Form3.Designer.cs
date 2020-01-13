@@ -44,6 +44,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -81,6 +82,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -135,7 +137,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 114);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1009, 531);
+            this.groupBox1.Size = new System.Drawing.Size(1285, 531);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta";
@@ -216,39 +218,43 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView2.Enabled = false;
             this.dataGridView2.Location = new System.Drawing.Point(6, 335);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(945, 190);
+            this.dataGridView2.Size = new System.Drawing.Size(1269, 190);
             this.dataGridView2.TabIndex = 1;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(6, 49);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(945, 67);
+            this.dataGridView1.Size = new System.Drawing.Size(1263, 67);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Enabled = false;
             this.dataGridView3.Location = new System.Drawing.Point(20, 111);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(729, 66);
+            this.dataGridView3.Size = new System.Drawing.Size(1121, 66);
             this.dataGridView3.TabIndex = 2;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.textBox13);
             this.groupBox2.Controls.Add(this.textBox10);
@@ -282,6 +288,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar Contrato";
             this.groupBox2.Visible = false;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(267, 21);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(108, 39);
+            this.label23.TabIndex = 21;
+            this.label23.Text = "Ingresar solo número \r\ndel contrato y año\r\nseparados por guión ";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // button4
             // 
@@ -327,9 +344,9 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(16, 405);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 32);
+            this.label18.Size = new System.Drawing.Size(106, 32);
             this.label18.TabIndex = 17;
-            this.label18.Text = "Nombre \r\ndel cotratista";
+            this.label18.Text = "Nombre \r\ndel contratista";
             // 
             // label12
             // 
@@ -345,9 +362,9 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(13, 369);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(102, 32);
+            this.label17.Size = new System.Drawing.Size(110, 32);
             this.label17.TabIndex = 16;
-            this.label17.Text = "Identificación\r\n del cotratista";
+            this.label17.Text = "Identificación\r\n del contratista";
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label13
@@ -504,7 +521,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(1, 88);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(968, 323);
+            this.groupBox3.Size = new System.Drawing.Size(1286, 323);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Editar";
@@ -606,21 +623,32 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(106, 41);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(108, 39);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "Ingresar solo número \r\ndel contrato y año\r\nseparados por guión ";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(1053, 674);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1309, 674);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -694,5 +722,7 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
     }
 }
