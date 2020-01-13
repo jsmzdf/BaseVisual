@@ -17,7 +17,7 @@ namespace AppBD.Clases
         public OleDbDataAdapter ORDEN;
         OleDbCommand ORDENU;
         DataTable dt = new DataTable();
-        string estado;
+        public string estado;
         public void consultarP(string consulta)
         {
             
@@ -39,6 +39,13 @@ namespace AppBD.Clases
             foreach (DataRow row in dt.Rows)
             {
                 estado = Convert.ToString(row["ESTADO"]);
+                Console.WriteLine(estado);
+                if (estado=="PRESTADO")
+                {
+
+                    break;
+                }
+                
 
             }
 
