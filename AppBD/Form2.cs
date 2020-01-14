@@ -66,6 +66,12 @@ namespace AppBD
                     prestamo.obetenerUltimoID();
                     prestamo.generarPR(double.Parse(prestamo.id), textBox2.Text, textBox3.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text);
                     presCon.addConPRes(double.Parse(prestamo.id), textBox1.Text);
+                    textBox1.Enabled = true;
+                    button6.Enabled = false;
+                    label4.Text = "---";
+                    button1.Enabled = false;
+                    button6.Enabled = false;
+                    MessageBox.Show("Se ha generado la préstamo");
                 }
                 else
                 {
@@ -77,7 +83,7 @@ namespace AppBD
                     textBox6.Text = "";
                     textBox7.Text = "";
                     textBox8.Text = "";
-                    textBox10.Text = "";
+                   
                   
 
 
@@ -85,7 +91,7 @@ namespace AppBD
             }
             catch (Exception)
             {
-
+                MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
             }
             textBox1.Text = "";
             button8.Enabled = true;
@@ -95,17 +101,18 @@ namespace AppBD
             textBox6.Text = "";
             textBox7.Text = "";
             textBox8.Text = "";
-            textBox10.Text = "";
+          
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            contrato.consultarC(textBox1.Text);
             try
             {
                 //bool exixtencia = true;
 
                 
-                contrato.consultarC(textBox1.Text);
+              
                 
                 prestamo.consultarP(textBox1.Text);
                 if (contrato.cod == textBox1.Text)
@@ -119,11 +126,16 @@ namespace AppBD
                     dataGridView2.DataSource = prestamo.TABLA;
                     dataGridView2.DataMember = "Prestamo";
                     if (prestamo.estado=="PRESTADO") {
+                        MessageBox.Show("El contrato se encuentra prestado se puede hacer una devolución");
+                        label4.Text = prestamo.idRef;
                         button6.Enabled = false;
                         button3.Enabled = true;
+                        button2.Enabled = true;
                     }
                     else
                     {
+                        MessageBox.Show("Puede prestar el contrato");
+                        button1.Enabled = true;
                         button6.Enabled = true;
                         button3.Enabled = false;
                     }
@@ -145,15 +157,18 @@ namespace AppBD
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                
+            
+                try
+                {
                     MessageBoxButtons sino = MessageBoxButtons.YesNo;
                     DialogResult accion = MessageBox.Show("¿Quiere realizar acción?", "", sino, MessageBoxIcon.Question);
                     if (accion == DialogResult.Yes)
                     {
-                       
-                    }
+                    prestamo.updateP(double.Parse( prestamo.idRef));
+                    textBox1.Enabled = true;
+                    button3.Enabled = false;
+                    MessageBox.Show("Se ha hecho la devolución");
+                }
                     else
                     {
                         textBox1.Text = "";
@@ -164,7 +179,10 @@ namespace AppBD
                         textBox6.Text = "";
                         textBox7.Text = "";
                         textBox8.Text = "";
-                        textBox10.Text = "";
+                        label4.Text = "---";
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                       
 
 
 
@@ -172,8 +190,9 @@ namespace AppBD
                 }
                 catch (Exception)
                 {
+                MessageBox.Show("Verifique que no esten modificando propiedades de la base o que no hayan movido en archcivo de lugar");
 
-                }
+            }
             textBox1.Text = "";
             button8.Enabled = true;
             textBox2.Text = "";
@@ -182,9 +201,8 @@ namespace AppBD
             textBox6.Text = "";
             textBox7.Text = "";
             textBox8.Text = "";
-            textBox10.Text = "";
-        }
             
+
         }
     }
 }

@@ -51,9 +51,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button8 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -86,13 +86,15 @@
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button6.Enabled = false;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Location = new System.Drawing.Point(46, 170);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(77, 38);
             this.button6.TabIndex = 25;
             this.button6.Text = "Generar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label8
@@ -120,7 +122,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 16);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Motivo del prestamo";
+            this.label6.Text = "Motivo del préstamo";
             // 
             // label5
             // 
@@ -210,50 +212,64 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(782, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(132, 33);
             this.button5.TabIndex = 6;
             this.button5.Text = "Salir";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(626, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(132, 33);
             this.button4.TabIndex = 5;
             this.button4.Text = "Atras";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(32, 251);
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button1.Enabled = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(31, 227);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 33);
+            this.button1.Size = new System.Drawing.Size(107, 44);
             this.button1.TabIndex = 7;
             this.button1.Text = "Generar préstamo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(153, 251);
+            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button2.Enabled = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(153, 227);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 33);
+            this.button2.Size = new System.Drawing.Size(107, 44);
             this.button2.TabIndex = 8;
             this.button2.Text = "Devolución";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox10);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(32, 290);
             this.groupBox2.Name = "groupBox2";
@@ -265,12 +281,15 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(24, 95);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(97, 36);
             this.button3.TabIndex = 24;
-            this.button3.Text = "Devolver";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "Devorlver";
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label10
@@ -278,16 +297,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(21, 49);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(115, 16);
+            this.label10.Size = new System.Drawing.Size(120, 16);
             this.label10.TabIndex = 21;
-            this.label10.Text = "ID_PRESTAMO";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(204, 46);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 9;
+            this.label10.Text = "Id del préstamo:";
             // 
             // dataGridView2
             // 
@@ -295,20 +307,32 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(32, 97);
+            this.dataGridView2.Location = new System.Drawing.Point(31, 51);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(869, 148);
             this.dataGridView2.TabIndex = 27;
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(266, 6);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(132, 33);
             this.button8.TabIndex = 28;
             this.button8.Text = "Consulta";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(152, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(23, 16);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "---";
             // 
             // Form2
             // 
@@ -324,8 +348,8 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -353,7 +377,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
@@ -368,5 +391,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label4;
     }
 }

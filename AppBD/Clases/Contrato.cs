@@ -15,11 +15,17 @@ namespace AppBD.Clases
         DataTable dt = new DataTable();
         public string cod = "";
         public string objeto = "";
+        public string codigo="";
+        public string ano="";
+        public string ubicacion="";
+        public string carpetasNO = "";
+        public string plazodias = "";
+        public string contraVal="";
+        public string interventr = "";
+
         OleDbCommand ORDENU;
         public void consultarC(string consulta)
-        {
-            
-            
+        {                        
             con.conectar();
             ORDEN = new OleDbDataAdapter("SELECT * FROM [CONTRATO] WHERE CONTRATO_NO =@CLABUSCAR", con.CANAL);
             ORDEN.SelectCommand.Parameters.Add(new OleDbParameter("@CLABUSCAR", OleDbType.VarChar));
@@ -28,17 +34,22 @@ namespace AppBD.Clases
             TABLA = new DataSet();
             ORDEN.Fill(TABLA);
             dt = TABLA.Tables[0];
-
             foreach (DataRow row in dt.Rows)
             {
                 cod = Convert.ToString(row["CONTRATO_NO"]);
-
-            }
-            foreach (DataRow row in dt.Rows)
-            {
+                codigo = Convert.ToString(row["CONTRATO_SECOP"]);
+                ano = Convert.ToString(row["AÑO"]);
+                ubicacion = Convert.ToString(row["UBICACIÓN"]);
+                carpetasNO = Convert.ToString(row["CARPETAS_NO"]);
                 objeto = Convert.ToString(row["OBJETO"]);
+                
+                plazodias = Convert.ToString(row["PLAZO_DIAS"]);
+                contraVal= Convert.ToString(row["CONTRATO_VALOR"]);
+                interventr = Convert.ToString(row["INTERVENTOR"]);
 
             }
+           
+
 
         }
         public void updateC(string ubicacion,string numerocCarpetas,string numeroContrato)

@@ -75,23 +75,29 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(186, 206);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(186, 193);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(79, 48);
             this.button1.TabIndex = 4;
             this.button1.Text = "Ingresar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(15, 67);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(103, 42);
             this.button4.TabIndex = 8;
             this.button4.Text = "seleccionar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label3
@@ -114,12 +120,15 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(367, 193);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(62, 48);
             this.button5.TabIndex = 10;
             this.button5.Text = "Salir";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form5

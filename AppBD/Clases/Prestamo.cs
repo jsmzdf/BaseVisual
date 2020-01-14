@@ -17,8 +17,10 @@ namespace AppBD.Clases
         public OleDbDataAdapter ORDEN;
         OleDbCommand ORDENU;
         DataTable dt = new DataTable();
+        public string idRef;
         public string estado;
         public string id;
+
         public void consultarP(string consulta)
         {
             
@@ -40,7 +42,8 @@ namespace AppBD.Clases
             foreach (DataRow row in dt.Rows)
             {
                 estado = Convert.ToString(row["ESTADO"]);
-                Console.WriteLine(estado);
+                idRef=  Convert.ToString(row["ID_PRESTAMO"]);
+
                 if (estado=="PRESTADO")
                 {
 
@@ -65,21 +68,24 @@ namespace AppBD.Clases
             ORDENU.Connection.Close();
         }
 
-        public void updateC(string ubicacion, string numerocCarpetas, string numeroContrato)
+        public void updateP(double consulta)
         {
-           /* con.conectar();
-            string q = "update  [CONTRATO] set [UBICACIÓN] = @UBI, CARPETAS_NO = @CNO where CONTRATO_NO= @contratono";
+            con.conectar();
+            string q = "update  [PRESTAMOS_DEVOLUCIONES] set [FECHA_DEVOLUCION] = @FECHAACT, " +
+                "ESTADO = @CNO where ID_PRESTAMO= @CONSULTA";
             ORDENU = new OleDbCommand(q, con.CANAL);
-            ORDENU.Parameters.Add(new OleDbParameter("@UBI", OleDbType.VarWChar));
-            ORDENU.Parameters["@UBI"].Value = ubicacion;
+            ORDENU.Parameters.Add(new OleDbParameter("@FECHAACT", OleDbType.Date));
+            ORDENU.Parameters["@FECHAACT"].Value = DateTime.Now;
             ORDENU.Parameters.Add(new OleDbParameter("@CNO", OleDbType.VarChar));
-            ORDENU.Parameters["@CNO"].Value = numerocCarpetas;
-            ORDENU.Parameters.Add(new OleDbParameter("@contratono", OleDbType.VarChar));
-            ORDENU.Parameters["@contratono"].Value = numeroContrato;
+            ORDENU.Parameters["@CNO"].Value = "DEVUELTO";
+            ORDENU.Parameters.Add(new OleDbParameter("@CONSULTA", OleDbType.Double));
+            ORDENU.Parameters["@CONSULTA"].Value = consulta;
+
+
 
             ORDENU.Connection.Open();
             ORDENU.ExecuteNonQuery();
-            ORDENU.Connection.Close();*/
+            ORDENU.Connection.Close();
         }
         public void generarPR(double idPrestamo,string funcionarioContratista, string dependencia, string quienPresta,
             string motivoPrestamo,string numeroCarpetas,string observaciones)

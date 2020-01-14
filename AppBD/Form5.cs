@@ -60,7 +60,7 @@ namespace AppBD
                 presta.con.ruta = textBox3.Text;
                 presta.con.conectar();
                 presta.actualizarfechaactual();
-                button1.Enabled = true; MessageBox.Show("Ubicació encontrada"); }
+                button1.Enabled = true; MessageBox.Show("Ubicación encontrada"); }
             else { MessageBox.Show("EL archivo no existe"); }
 
         }

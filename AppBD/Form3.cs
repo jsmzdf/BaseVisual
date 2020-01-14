@@ -28,7 +28,9 @@ namespace AppBD
             contratista.con.ruta = this.ruta;
             contrato.con.ruta = this.ruta;
             prestamo.con.ruta = this.ruta;
+           
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,12 +43,16 @@ namespace AppBD
 
                 contrato.consultarC(textBox1.Text);
                 textBox17.Text = contrato.objeto;
-                contrato.TABLA = new DataSet();
-                contrato.ORDEN.Fill(contrato.TABLA, "CONTRATO");
-                dataGridView1.DataSource = contrato.TABLA;
-                dataGridView1.DataMember = "CONTRATO";
+                textBox19.Text = contrato.codigo;
+                textBox25.Text = contrato.ano;
+                textBox19.Text = contrato.carpetasNO;
+                textBox24.Text = contrato.plazodias;
+                textBox26.Text =contrato.contraVal ;
+                textBox23.Text = contrato.interventr;
+                textBox18.Text = contrato.ubicacion;
 
-                
+
+
                 prestamo.consultarP(textBox1.Text);
                 prestamo.TABLA = new DataSet();
                 prestamo.ORDEN.Fill(prestamo.TABLA, "Prestamo");
@@ -55,8 +61,8 @@ namespace AppBD
 
                 
                 contratista.consultarContratisa(textBox1.Text);
-                label15.Text = contratista.nombre;
-                label16.Text = contratista.id;
+                textBox20.Text = contratista.nombre;
+                textBox21.Text = contratista.id;
             } catch (Exception) { MessageBox.Show("Ingrese valoes correctos", "error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             
           
@@ -224,6 +230,7 @@ namespace AppBD
                 {
                     contrato.updateC(textBox16.Text, textBox15.Text, textBox14.Text);
                     textBox14.Enabled = true;
+                MessageBox.Show("Se ha actualizado correctamente");
                 }
                 else
                 {
@@ -289,6 +296,86 @@ namespace AppBD
         }
 
         private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+            textBox17.Multiline = true;
+           
+            textBox17.ScrollBars = ScrollBars.Vertical;
+            
+            textBox17.AcceptsReturn = true;
+           
+            textBox17.AcceptsTab = true;
+            
+            textBox17.WordWrap = true;
+            textBox17.Size=new Size(new  Point(250,46));
+            
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+            textBox18.Multiline = true;
+            
+            textBox18.ScrollBars = ScrollBars.Vertical;
+          
+            textBox18.AcceptsReturn = true;
+            
+            textBox18.AcceptsTab = true;
+            
+            textBox18.WordWrap = true;
+            textBox18.Size = new Size(new Point(250, 46));
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+            textBox19.Multiline = true;
+            
+            textBox19.ScrollBars = ScrollBars.Vertical;
+            
+            textBox19.AcceptsReturn = true;
+            
+            textBox19.AcceptsTab = true;
+            
+            textBox19.WordWrap = true;
+            textBox19.Size = new Size(new Point(250, 46));
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
         {
 
         }
