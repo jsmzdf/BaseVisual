@@ -57,9 +57,15 @@ namespace AppBD
             contra.con.conectar();
             
             if (contra.con.result.Equals("ok")) {
-                presta.con.ruta = textBox3.Text;
-                presta.con.conectar();
-                presta.actualizarfechaactual();
+                try {
+                    presta.con.ruta = textBox3.Text;
+                    presta.con.conectar();
+                    presta.actualizarfechaactual();
+                } catch (Exception) {
+                    MessageBox.Show("Verifique quesea el archivo correcto\n " +
+                        "o que no este en modo edicion");
+                }
+                
                 button1.Enabled = true; MessageBox.Show("Ubicación encontrada"); }
             else { MessageBox.Show("EL archivo no existe"); }
 
@@ -73,6 +79,11 @@ namespace AppBD
         private void button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
