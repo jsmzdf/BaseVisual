@@ -1,0 +1,13 @@
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\bin\Release\AppBD.exe.config
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\bin\Release\AppBD.exe
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\bin\Release\AppBD.pdb
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.Form1.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.Form2.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.Form3.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.Form4.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.Form5.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.Properties.Resources.resources
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.csproj.GenerateResource.cache
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.csproj.CoreCompileInputs.cache
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.exe
+C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Release\AppBD.pdb
