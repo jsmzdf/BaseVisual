@@ -50,6 +50,7 @@ namespace AppBD
                 textBox23.Text = contrato.interventr;
                 textBox18.Text = contrato.ubicacion;
                 textBox27.Text = contrato.sedno;
+
                 
 
 
