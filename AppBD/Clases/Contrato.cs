@@ -22,6 +22,7 @@ namespace AppBD.Clases
         public string plazodias = "";
         public string contraVal="";
         public string interventr = "";
+        public string sedno = "";
 
         OleDbCommand ORDENU;
         public void consultarC(string consulta)
@@ -42,7 +43,7 @@ namespace AppBD.Clases
                 ubicacion = Convert.ToString(row["UBICACIÓN"]);
                 carpetasNO = Convert.ToString(row["CARPETAS_NO"]);
                 objeto = Convert.ToString(row["OBJETO"]);
-                
+                sedno = Convert.ToString(row["SED_NO"]);
                 plazodias = Convert.ToString(row["PLAZO_DIAS"]);
                 contraVal= Convert.ToString(row["CONTRATO_VALOR"]);
                 interventr = Convert.ToString(row["INTERVENTOR"]);

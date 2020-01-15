@@ -28,7 +28,6 @@ namespace AppBD
             contratista.con.ruta = this.ruta;
             contrato.con.ruta = this.ruta;
             prestamo.con.ruta = this.ruta;
-           
             InitializeComponent();
             
         }
@@ -43,13 +42,15 @@ namespace AppBD
 
                 contrato.consultarC(textBox1.Text);
                 textBox17.Text = contrato.objeto;
-                textBox19.Text = contrato.codigo;
+                textBox22.Text = contrato.codigo;
                 textBox25.Text = contrato.ano;
                 textBox19.Text = contrato.carpetasNO;
                 textBox24.Text = contrato.plazodias;
                 textBox26.Text =contrato.contraVal ;
                 textBox23.Text = contrato.interventr;
                 textBox18.Text = contrato.ubicacion;
+                textBox27.Text = contrato.sedno;
+                
 
 
 
