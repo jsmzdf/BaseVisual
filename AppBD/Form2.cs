@@ -71,7 +71,7 @@ namespace AppBD
                     label4.Text = "---";
                     button1.Enabled = false;
                     button6.Enabled = false;
-                    MessageBox.Show("Se ha generado la préstamo");
+                    MessageBox.Show("Se ha generado el préstamo");
                 }
                 else
                 {

@@ -5,7 +5,6 @@ C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.csprojAssembl
 C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Form1.resources
 C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Properties.Resources.resources
 C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.csproj.GenerateResource.cache
-C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.csproj.CoreCompileInputs.cache
 C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.exe
 C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.pdb
 C:\Users\sebas\udistri\trabajo hermana\AppBD\AppBD\obj\Debug\AppBD.Form3.resources
