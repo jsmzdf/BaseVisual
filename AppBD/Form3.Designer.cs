@@ -40,6 +40,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -97,8 +99,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -258,6 +258,22 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Información contrato";
             // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(306, 164);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(71, 22);
+            this.textBox27.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(205, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 32);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Código\r\nSecretaría:";
+            // 
             // textBox26
             // 
             this.textBox26.Location = new System.Drawing.Point(306, 211);
@@ -267,7 +283,7 @@
             // 
             // textBox25
             // 
-            this.textBox25.Location = new System.Drawing.Point(107, 211);
+            this.textBox25.Location = new System.Drawing.Point(315, 29);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(71, 22);
             this.textBox25.TabIndex = 30;
@@ -360,7 +376,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(25, 217);
+            this.label26.Location = new System.Drawing.Point(233, 35);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(39, 16);
             this.label26.TabIndex = 13;
@@ -797,22 +813,6 @@
             this.label24.Size = new System.Drawing.Size(108, 39);
             this.label24.TabIndex = 22;
             this.label24.Text = "Ingresar solo número \r\ndel contrato y año\r\nseparados por guión ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 154);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 32);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Código\r\nSecretaría:";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(306, 164);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(71, 22);
-            this.textBox27.TabIndex = 33;
             // 
             // Form3
             // 
