@@ -99,8 +99,12 @@ namespace AppBD
             try {
 
                 bool exixtencia = true;
-                
-                contratista.consutaexistencia(textBox12.Text);
+                DataSet ds = new DataSet();
+                DataTable dt = ds.Tables[0];
+                dataGridView1.DataSource = dt;
+               
+
+                    contratista.consutaexistencia(textBox12.Text);
                 contrato.consultarC(textBox2.Text);
                 string cc = contratista.id;
                 ArrayList nombres = contratista.nombres;

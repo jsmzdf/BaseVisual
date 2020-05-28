@@ -99,6 +99,19 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contrato_secop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.No_carpeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.No_SED = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Objeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plazo_en_dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Interventor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_contratista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_contratista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -107,6 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -423,6 +437,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.textBox13);
             this.groupBox2.Controls.Add(this.textBox10);
@@ -452,7 +467,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(131, 86);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(449, 484);
+            this.groupBox2.Size = new System.Drawing.Size(777, 484);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar Contrato";
@@ -814,6 +829,87 @@
             this.label24.TabIndex = 22;
             this.label24.Text = "Ingresar solo número \r\ndel contrato y año\r\nseparados por guión ";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Numero,
+            this.Contrato_secop,
+            this.Ano,
+            this.Ubicacion,
+            this.No_carpeta,
+            this.No_SED,
+            this.Objeto,
+            this.Plazo_en_dias,
+            this.Valor_contrato,
+            this.Interventor,
+            this.Id_contratista,
+            this.Nombre_contratista});
+            this.dataGridView1.Location = new System.Drawing.Point(19, 74);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(742, 150);
+            this.dataGridView1.TabIndex = 23;
+            // 
+            // Numero
+            // 
+            this.Numero.HeaderText = "Número";
+            this.Numero.Name = "Numero";
+            // 
+            // Contrato_secop
+            // 
+            this.Contrato_secop.HeaderText = "Contrato_secop";
+            this.Contrato_secop.Name = "Contrato_secop";
+            // 
+            // Ano
+            // 
+            this.Ano.HeaderText = "Año";
+            this.Ano.Name = "Ano";
+            // 
+            // Ubicacion
+            // 
+            this.Ubicacion.HeaderText = "Ubicación";
+            this.Ubicacion.Name = "Ubicacion";
+            // 
+            // No_carpeta
+            // 
+            this.No_carpeta.HeaderText = "No_Carpeta";
+            this.No_carpeta.Name = "No_carpeta";
+            // 
+            // No_SED
+            // 
+            this.No_SED.HeaderText = "No_SED";
+            this.No_SED.Name = "No_SED";
+            // 
+            // Objeto
+            // 
+            this.Objeto.HeaderText = "Objeto";
+            this.Objeto.Name = "Objeto";
+            // 
+            // Plazo_en_dias
+            // 
+            this.Plazo_en_dias.HeaderText = "Plazo_en_Días";
+            this.Plazo_en_dias.Name = "Plazo_en_dias";
+            // 
+            // Valor_contrato
+            // 
+            this.Valor_contrato.HeaderText = "Valor del contrato";
+            this.Valor_contrato.Name = "Valor_contrato";
+            // 
+            // Interventor
+            // 
+            this.Interventor.HeaderText = "Interventor";
+            this.Interventor.Name = "Interventor";
+            // 
+            // Id_contratista
+            // 
+            this.Id_contratista.HeaderText = "Identificación del cotratista ";
+            this.Id_contratista.Name = "Id_contratista";
+            // 
+            // Nombre_contratista
+            // 
+            this.Nombre_contratista.HeaderText = "Nombre del contratista";
+            this.Nombre_contratista.Name = "Nombre_contratista";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -846,6 +942,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -924,5 +1021,18 @@
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contrato_secop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ano;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ubicacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No_carpeta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No_SED;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Objeto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Plazo_en_dias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Interventor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_contratista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_contratista;
     }
 }
